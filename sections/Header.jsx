@@ -10,9 +10,6 @@ const Header = () => {
         <a href="#" className="nav-item">
           Projects
         </a>
-        <a href="#" className="nav-item">
-          About
-        </a>
         <a href="#" className="nav-item bg-white text-[--background]">
           Contact
         </a>

@@ -3,14 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #101010;
+  --background: #1e1e1e;
   --primary-text: #f2f2f2;
   --secondary-text: #a0a0a0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -18,15 +20,10 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-
-@layer base {
-  .nav-item {
-    @apply px-4 py-1.5 rounded-full text-[--secondary-text] text-sm font-semibold;
-  }
+.nav-item {
+  @apply px-4 py-1.5 rounded-full text-[--secondary-text] text-sm font-semibold;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.text-balance {
+  text-wrap: balance;
 }
