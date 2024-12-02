@@ -4,8 +4,8 @@
 
 :root {
   --background: #1e1e1e;
-  --primary-text: #f2f2f2;
-  --secondary-text: #a0a0a0;
+  --primary-text: #ddd;
+  --secondary-text: #adadad;
 }
 
 html,
@@ -26,4 +26,13 @@ body {
 
 .text-balance {
   text-wrap: balance;
+}
+
+#hero p {
+  color: var(--secondary-text);
+}
+
+#hero h1 {
+  font-size: 13rem;
+  font-weight: 700;
 }
