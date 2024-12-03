@@ -1,5 +1,6 @@
 import React from "react";
-import { home } from "@/assets/images";
+import { home } from "@/public/images";
+import Image from "next/image";
 
 const Projects = () => {
   return (
@@ -7,7 +8,7 @@ const Projects = () => {
       <section className="grid grid-cols-5 grid-rows-6 gap-2">
         <div className="col-span-3 row-span-3 bg-blue-300">
           <a href="" target="_blank">
-            <img
+            <Image
               src={home}
               alt="projectImg"
               className="w-full h-full object-cover object-center"
