@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Backdrop from "./Backdrop";
+import { AnimatePresence } from "motion/react";
 
 const dropIn = {
   hidden: {
@@ -18,17 +19,20 @@ const dropIn = {
 
 const Modal = ({ handleClose, text }) => {
   return (
-    <Backdrop onClick={handleClose}>
-      <motion.div
-        // Stops the modal from closing while clicking inside
-        onClick={(e) => e.stopPropagation()}
-        className="modal"
-        variants={dropIn}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-      ></motion.div>
-    </Backdrop>
+    <AnimatePresence>
+      <Backdrop onClick={handleClose}>
+        <motion.div
+          // Stops the modal from closing while clicking inside
+          onClick={(e) => e.stopPropagation()}
+          className="modal"
+          variants={dropIn}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          transition={{ type: "tween", duration: 0.5 }}
+        ></motion.div>
+      </Backdrop>
+    </AnimatePresence>
   );
 };
 

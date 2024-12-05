@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Modal from "@/components/Modal";
-import { AnimatePresence } from "motion/react";
 import { home } from "@/public/images";
 import Image from "next/image";
 
@@ -40,11 +39,7 @@ const Projects = () => {
           project5
         </div>
 
-        <AnimatePresence>
-          {modalOpen && (
-            <Modal modalOpen={modalOpen} handleClose={closeModal} />
-          )}
-        </AnimatePresence>
+        {modalOpen && <Modal modalOpen={modalOpen} handleClose={closeModal} />}
       </section>
     </div>
   );
