@@ -1,9 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import Modal from "@/components/Modal";
-import { home } from "@/public/images";
+import { AnimatePresence } from "motion/react";
 import Image from "next/image";
+import { projects } from "@/constants";
 
 const Projects = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -17,29 +17,21 @@ const Projects = () => {
         <h2 className="section-title">Projects</h2>
       </div>
 
-      <section id="projects" className="grid grid-cols-5 grid-rows-6 gap-2">
-        <div className="col-span-3 row-span-3">
-          <Image
-            src={home}
-            alt="projectImg"
-            className="project-img"
-            onClick={() => (modalOpen ? closeModal() : openModal())}
-          />
-        </div>
-        <div className="col-span-2 row-span-2 border border-white">
-          project2
-        </div>
-        <div className="col-span-2 row-span-2 border border-white">
-          project3
-        </div>
-        <div className="col-span-3 row-span-3 border border-white">
-          project4
-        </div>
-        <div className="col-span-2 row-span-2 border border-white">
-          project5
-        </div>
-
-        {modalOpen && <Modal modalOpen={modalOpen} handleClose={closeModal} />}
+      <section id="projects" className="grid grid-cols-5 grid-rows-6 gap-4">
+        {projects.map((project, index) => (
+          <div key={project.name}>
+            <Image
+              src={project.img}
+              alt="projectImg"
+              className="project-img"
+              animate={{
+                y: ["-100vh", 0],
+              }}
+              transition={{ duration: 1.2, delay: index, ease: "easeOut" }}
+              onClick={() => (modalOpen ? closeModal() : openModal())}
+            />
+          </div>
+        ))}
       </section>
     </div>
   );
