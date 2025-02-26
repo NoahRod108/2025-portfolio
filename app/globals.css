@@ -58,12 +58,12 @@ body {
 }
 
 #hero h1 {
-  font-size: 13rem;
+  font-size: 10rem;
   font-weight: 700;
 }
 
 .nav-item {
-  @apply px-4 py-1.5 rounded-full text-[--secondary-text] text-sm font-semibold;
+  @apply px-4 py-1.5 rounded-full text-[--secondary-text] text-lg font-semibold;
 }
 
 #projects {
