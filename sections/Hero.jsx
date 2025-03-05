@@ -53,13 +53,19 @@ const Hero = () => {
           className="flex justify-center items-center gap-8 pt-8"
         >
           <a href="#">
-            <Github />
+            <button>
+              <Github />
+            </button>
           </a>
           <a href="#">
-            <Linkedin />
+            <button>
+              <Linkedin />
+            </button>
           </a>
           <a href="#">
-            <Resume />
+            <button>
+              <Resume />
+            </button>
           </a>
         </motion.div>
       </section>
