@@ -2,6 +2,9 @@
 
 import React from "react";
 import { easeOut, motion } from "framer-motion";
+import Github from "@/public/icons/Github";
+import Linkedin from "@/public/icons/linkedin";
+import Resume from "@/public/icons/Resume";
 
 const Hero = () => {
   return (
@@ -42,20 +45,21 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
+          id="hero-icons"
           animate={{
             opacity: [0, 100],
           }}
           transition={{ duration: 1.8, ease: "easeOut" }}
-          className="flex justify-center gap-4"
+          className="flex justify-center items-center gap-8 pt-8"
         >
           <a href="#">
-            <button>test</button>
+            <Github />
           </a>
           <a href="#">
-            <button>test</button>
+            <Linkedin />
           </a>
           <a href="#">
-            <button>test</button>
+            <Resume />
           </a>
         </motion.div>
       </section>
