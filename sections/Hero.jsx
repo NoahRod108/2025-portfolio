@@ -8,18 +8,16 @@ import Resume from "@/public/icons/Resume";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col flex-nowrap h-svh justify-center max-w-[1300px] w-full">
+    <div className="flex flex-col justify-center w-full h-lvh">
       <section id="hero">
         <motion.div
           animate={{
             opacity: [0, 100],
           }}
           transition={{ duration: 1.8, ease: "easeOut" }}
-          className="flex items-end justify-center gap-8 h-min w-full"
+          className="flex items-end justify-center gap-8"
         >
-          <div>
-            <h1 className="leading-[.8em]">Noah</h1>
-          </div>
+          <h1 className="md:text-[10rem] text-5xl">Noah</h1>
 
           <motion.div
             animate={{
@@ -27,7 +25,7 @@ const Hero = () => {
             }}
             transition={{ duration: 2, delay: 1, ease: "easeOut" }}
           >
-            <p className="text-[1.2rem] max-w-[450px]">
+            <p className="text-sm max-w-[450px]">
               Web Developer with over 3 years of experience working on
               full-stack web applications
             </p>
@@ -39,9 +37,9 @@ const Hero = () => {
             opacity: [0, 100],
           }}
           transition={{ duration: 1.8, ease: "easeOut" }}
-          className="flex pl-32 justify-center leading-[192px]"
+          className="flex md:pl-32 justify-center leading-[192px]"
         >
-          <h1>Rodriguez</h1>
+          <h1 className="md:text-[10rem] text-5xl">Rodriguez</h1>
         </motion.div>
 
         <motion.div
@@ -52,20 +50,14 @@ const Hero = () => {
           transition={{ duration: 1.8, ease: "easeOut" }}
           className="flex justify-center items-center gap-8 pt-8"
         >
-          <a href="#">
-            <button>
-              <Github />
-            </button>
+          <a href="#" className="border-cyan-500">
+            <Github />
           </a>
           <a href="#">
-            <button>
-              <Linkedin />
-            </button>
+            <Linkedin />
           </a>
           <a href="#">
-            <button>
-              <Resume />
-            </button>
+            <Resume />
           </a>
         </motion.div>
       </section>
