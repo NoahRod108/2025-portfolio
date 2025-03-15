@@ -25,26 +25,11 @@ body {
   text-wrap: balance;
 }
 
-/* .section-title {
-  font-size: 4rem;
-  font-weight: bold;
-}
-
-#hero p {
-  color: var(--secondary-text);
-}
-
-#hero h1 {
-  font-size: 10rem;
-  font-weight: 700;
-} */
-
 #hero-icons a {
   @apply border rounded-full border-[#ddd] p-4 hover:border-cyan-500 hover:scale-[1.1] transition-colors ease-in-out;
 }
 #hero-icons svg {
-  width: 28px;
-  height: 28px;
+  @apply w-6 h-6 md:w-12 md:h-12 lg:w-8 lg:h-8;
 }
 
 .nav-item {
@@ -78,4 +63,39 @@ body {
 
 .project-img {
   @apply w-full h-full object-cover object-center grayscale transition duration-500 hover:grayscale-0 cursor-pointer rounded-xl;
+}
+
+/* Wave animation */
+.wave {
+  animation-name: wave-animation;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  40% {
+    transform: rotate(14deg);
+  }
+  50% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }

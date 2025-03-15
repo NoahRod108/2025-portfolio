@@ -8,16 +8,16 @@ import Resume from "@/public/icons/Resume";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col justify-center w-full h-lvh">
+    <div className="flex flex-col justify-center h-lvh">
       <section id="hero">
         <motion.div
           animate={{
             opacity: [0, 100],
           }}
           transition={{ duration: 1.8, ease: "easeOut" }}
-          className="flex items-end justify-center gap-8"
+          className="flex gap-4 sm:gap-8 items-end"
         >
-          <h1 className="md:text-[10rem] text-5xl">Noah</h1>
+          <h1 className="text-5xl md:text-[10rem]">Noah</h1>
 
           <motion.div
             animate={{
@@ -25,10 +25,15 @@ const Hero = () => {
             }}
             transition={{ duration: 2, delay: 1, ease: "easeOut" }}
           >
-            <p className="text-sm max-w-[450px]">
+            <p className="max-w-[450px] hidden xs:inline-block xs:max-w-[250px]">
               Web Developer with over 3 years of experience working on
               full-stack web applications
             </p>
+          </motion.div>
+
+          {/* Mobile only */}
+          <motion.div className="xs:hidden">
+            <p className="text-3xl wave">👋</p>
           </motion.div>
         </motion.div>
 
@@ -37,7 +42,7 @@ const Hero = () => {
             opacity: [0, 100],
           }}
           transition={{ duration: 1.8, ease: "easeOut" }}
-          className="flex md:pl-32 justify-center leading-[192px]"
+          className="flex lg:pl-32 sm:justify-center leading-[192px]"
         >
           <h1 className="md:text-[10rem] text-5xl">Rodriguez</h1>
         </motion.div>
@@ -50,7 +55,7 @@ const Hero = () => {
           transition={{ duration: 1.8, ease: "easeOut" }}
           className="flex justify-center items-center gap-8 pt-8"
         >
-          <a href="#" className="border-cyan-500">
+          <a href="#">
             <Github />
           </a>
           <a href="#">

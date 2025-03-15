@@ -2,15 +2,15 @@ import React from "react";
 
 const Github = () => {
   return (
-    <div className="w-8 h-8">
+    <div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
-        stroke-width="1"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         class="feather feather-github"
       >
         <path

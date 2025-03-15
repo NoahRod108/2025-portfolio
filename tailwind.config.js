@@ -8,13 +8,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "32rem",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      fontFamily: {
-        
-      },
+      fontFamily: {},
     },
   },
   plugins: [],
