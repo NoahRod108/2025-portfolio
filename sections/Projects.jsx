@@ -12,12 +12,12 @@ const Projects = () => {
   const openModal = () => setModalOpen(true);
 
   return (
-    <div className="w-[1480px] min-h-full">
+    <div>
       <div className="pb-6">
-        <h2 className="section-title">Projects</h2>
+        <h2 className="text-4xl">Projects</h2>
       </div>
 
-      <section id="projects" className="grid grid-cols-5 grid-rows-6 gap-4">
+      <section id="projects" className="flex flex-col gap-4">
         {projects.map((project, index) => (
           <div key={project.name}>
             <Image

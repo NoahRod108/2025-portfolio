@@ -17,7 +17,7 @@ const Hero = () => {
           transition={{ duration: 1.8, ease: "easeOut" }}
           className="flex gap-4 sm:gap-8 items-end"
         >
-          <h1 className="text-5xl md:text-[10rem]">Noah</h1>
+          <h1 className="text-6xl md:text-[10rem]">Noah</h1>
 
           <motion.div
             animate={{
@@ -44,7 +44,7 @@ const Hero = () => {
           transition={{ duration: 1.8, ease: "easeOut" }}
           className="flex lg:pl-32 sm:justify-center leading-[192px]"
         >
-          <h1 className="md:text-[10rem] text-5xl">Rodriguez</h1>
+          <h1 className="md:text-[10rem] text-6xl">Rodriguez</h1>
         </motion.div>
 
         <motion.div
