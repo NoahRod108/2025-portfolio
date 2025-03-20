@@ -17,7 +17,7 @@ const Hero = () => {
             opacity: [0, 100],
           }}
           transition={{ duration: 1.8, ease: "easeOut" }}
-          className="flex gap-4 sm:gap-8 items-end"
+          className="flex gap-4 sm:gap-8 items-center sm:items-end"
         >
           <h1 className="text-6xl md:text-[10rem]">Noah</h1>
 
@@ -27,14 +27,14 @@ const Hero = () => {
             }}
             transition={{ duration: 2, delay: 1, ease: "easeOut" }}
           >
-            <p className="max-w-[450px] hidden xs:inline-block xs:max-w-[250px]">
+            <p className="max-w-[250px] hidden sm:inline-block sm:max-w-[450px] sm:text-lg md:text-xl">
               Web Developer with over 3 years of experience working on
               full-stack web applications
             </p>
           </motion.div>
 
           {/* Mobile only */}
-          <motion.div className="xs:hidden">
+          <motion.div className="sm:hidden">
             <p className="text-3xl wave">👋</p>
           </motion.div>
         </motion.div>
