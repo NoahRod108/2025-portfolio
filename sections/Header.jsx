@@ -4,7 +4,7 @@ const Header = () => {
   return (
     // <header className="flex justify-center items-center relative top-3">
     <header className="fixed left-1/2 top-10 z-[999] -translate-x-1/2 md:w-auto">
-      <nav className="flex justify-around gap-1 p-2 border border-white/15 rounded-full bg-white/10 backdrop-blur-md">
+      <nav className="flex justify-around gap-1 p-2 border border-white/5 rounded-full bg-white/10 backdrop-blur-md">
         <a href="#" className="nav-item">
           Home
         </a>

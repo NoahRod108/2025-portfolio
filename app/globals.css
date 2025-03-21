@@ -5,7 +5,7 @@
 :root {
   --background: #111;
   --primary-text: #ddd;
-  --secondary-text: #adadad;
+  --secondary-text: #8a8a8a;
 }
 
 html,
@@ -16,7 +16,6 @@ body {
 }
 
 body {
-  color: var(--foreground);
   background: radial-gradient(ellipse at top, #000 0%, #090a0f 100%);
   /* background: var(--background); */
   font-family: Arial, Helvetica, sans-serif;
@@ -24,7 +23,6 @@ body {
 
 #tsparticles {
   z-index: -1;
-  height: 945px;
   position: absolute;
 }
 
@@ -43,33 +41,20 @@ body {
   @apply px-4 py-1.5 rounded-full text-[--secondary-text] text-lg font-semibold;
 }
 
-/* #projects {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-#projects div:nth-child(1) {
-  grid-column: span 3 / span 3;
-  grid-row: span 3 / span 3;
-}
-#projects div:nth-child(2) {
-  grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
-}
-#projects div:nth-child(3) {
-  grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
-}
-#projects div:nth-child(4) {
-  grid-column: span 3 / span 3;
-  grid-row: span 3 / span 3;
-}
-#projects div:nth-child(5) {
-  grid-column: span 2 / span 2;
-  grid-row: span 2 / span 2;
-} */
-
 .project-img {
-  @apply w-full h-full object-cover object-center grayscale transition duration-500 hover:grayscale-0 cursor-pointer rounded-xl;
+  @apply w-full h-full object-cover object-center grayscale transition duration-500 hover:grayscale-0 rounded-xl;
+}
+
+.project-container {
+  @apply max-w-2xl p-4 bg-black/10 border-transparent rounded-lg backdrop-blur-md bg-gradient-to-b from-white/10 hover:to-cyan-500/30 transition ease-in-out hover:scale-105 duration-300;
+}
+
+#project-icons svg,
+#footer svg {
+  @apply w-6 h-6 xs:w-8 xs:h-8;
+}
+#footer svg {
+  color: var(--secondary-text);
 }
 
 /* Wave animation */

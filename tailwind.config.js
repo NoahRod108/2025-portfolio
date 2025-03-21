@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        secondaryText: "#adadad",
       },
       fontFamily: {},
     },
