@@ -3,7 +3,7 @@
 import React from "react";
 import { easeOut, motion } from "framer-motion";
 import Github from "@/public/icons/Github";
-import Linkedin from "@/public/icons/linkedin";
+import Linkedin from "@/public/icons/Linkedin";
 import Resume from "@/public/icons/Resume";
 import StarParticles from "@/components/StarParticles";
 
