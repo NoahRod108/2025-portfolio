@@ -19,7 +19,7 @@ const Projects = () => {
       </div>
 
       <section id="projects" className="grid grid-cols-1 gap-4">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div key={project.name} className="project-container">
             <div>
               <Image
@@ -29,29 +29,38 @@ const Projects = () => {
               />
             </div>
             <div className="flex flex-col gap-2 mt-2 mb-4">
-              <h3 className="font-bold text-2xl">Get Home</h3>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Laboriosam error molestiae et laudantium nulla voluptatum sequi
-                fuga enim suscipit quisquam!
-              </p>
+              <h3 className="font-bold text-2xl">{project.name}</h3>
+              <p className="text-secondaryText">{project.desc}</p>
             </div>
-            <div id="project-icons" className="flex gap-2 items-center">
-              <a
-                href="#"
-                className="inline-flex items-center px-4 py-2 bg-black/70 hover:bg-black/50 border border-transparent rounded"
-              >
-                <Github />
-                <span className="pl-2">Visit</span>
-              </a>
+            <div
+              id="project-icons"
+              className="flex flex-col items-center gap-3 md:flex-row md:justify-between"
+            >
+              <div className="flex gap-2">
+                <a
+                  href="#"
+                  className="inline-flex items-center px-4 py-2 bg-black/70 hover:bg-black/50 border border-transparent rounded"
+                >
+                  <Github />
+                  <span className="pl-2">Visit</span>
+                </a>
 
-              <a
-                href="#"
-                className="inline-flex items-center px-4 py-2 bg-transparent hover:bg-white/10 border border-white/10 rounded"
-              >
-                <Github />
-                <span className="pl-2">Source</span>
-              </a>
+                <a
+                  href="#"
+                  className="inline-flex items-center px-4 py-2 bg-white text-black hover:bg-white/80 border border-white/10 rounded"
+                >
+                  <Github />
+                  <span className="pl-2">Source</span>
+                </a>
+              </div>
+
+              <div className="flex gap-2 flex-wrap items-center justify-center">
+                {project.tags.map((tag) => (
+                  <span className="bg-white/20 px-1 py-1 rounded" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         ))}

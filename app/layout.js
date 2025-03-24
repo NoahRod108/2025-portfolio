@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-[--background] text-[--primary-text]">
         <Header />
-        <main>{children}</main>
+        <main className="text-primaryText">{children}</main>
         <Footer />
       </body>
     </html>

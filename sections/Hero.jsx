@@ -10,7 +10,7 @@ import StarParticles from "@/components/StarParticles";
 const Hero = () => {
   return (
     <div className="flex flex-col justify-center h-lvh">
-      <section id="hero">
+      <section id="hero" className="text-primaryText">
         <StarParticles id="tsparticles" />
         <motion.div
           animate={{

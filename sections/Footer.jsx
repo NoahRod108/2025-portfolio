@@ -15,7 +15,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="text-secondaryText">
-        Created &amp; designed by Noah Rodriguez
+        Created &amp; Designed by Noah Rodriguez
       </div>
     </footer>
   );

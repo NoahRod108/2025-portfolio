@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primaryText: "#f0f0f0",
         secondaryText: "#adadad",
       },
       fontFamily: {},
