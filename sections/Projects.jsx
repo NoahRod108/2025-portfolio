@@ -5,6 +5,7 @@ import { AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { projects } from "@/constants";
 import Github from "@/public/icons/Github";
+import Live from "@/public/icons/Live";
 
 const Projects = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -41,7 +42,7 @@ const Projects = () => {
                   href="#"
                   className="inline-flex items-center px-4 py-2 bg-black/70 hover:bg-black/50 border border-transparent rounded"
                 >
-                  <Github />
+                  <Live />
                   <span className="pl-2">Visit</span>
                 </a>
 
