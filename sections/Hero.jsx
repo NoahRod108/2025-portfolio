@@ -16,7 +16,7 @@ const Hero = () => {
           animate={{
             opacity: [0, 100],
           }}
-          transition={{ duration: 1.8, ease: "easeOut" }}
+          transition={{ duration: 1.8, ease: "easeInOut" }}
           className="flex gap-4 sm:gap-8 items-center sm:items-end"
         >
           <h1 className="text-6xl md:text-[10rem]">Noah</h1>
@@ -25,7 +25,7 @@ const Hero = () => {
             animate={{
               opacity: [0, 100],
             }}
-            transition={{ duration: 2, delay: 1, ease: "easeOut" }}
+            transition={{ duration: 2, delay: 1, ease: "easeInOut" }}
           >
             <p className="text-secondaryText max-w-[250px] hidden sm:inline-block sm:max-w-[450px] sm:text-lg md:text-xl">
               Web Developer with over 3 years of experience working on
@@ -43,7 +43,7 @@ const Hero = () => {
           animate={{
             opacity: [0, 100],
           }}
-          transition={{ duration: 1.8, ease: "easeOut" }}
+          transition={{ duration: 1.8, ease: "easeInOut" }}
           className="flex lg:pl-32 sm:justify-center leading-[192px]"
         >
           <h1 className="md:text-[10rem] text-6xl">Rodriguez</h1>
@@ -54,7 +54,7 @@ const Hero = () => {
           animate={{
             opacity: [0, 100],
           }}
-          transition={{ duration: 1.8, ease: "easeOut" }}
+          transition={{ duration: 1.8, ease: "easeInOut" }}
           className="flex justify-center items-center gap-8 pt-8"
         >
           <a href="#">

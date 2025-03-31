@@ -1,18 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { AnimatePresence } from "motion/react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { projects } from "@/constants";
 import Github from "@/public/icons/Github";
 import Live from "@/public/icons/Live";
 
 const Projects = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const closeModal = () => setModalOpen(false);
-  const openModal = () => setModalOpen(true);
-
   return (
     <div>
       <div className="pb-6">
@@ -21,7 +16,13 @@ const Projects = () => {
 
       <section id="projects" className="grid grid-cols-1 gap-4">
         {projects.map((project) => (
-          <div key={project.name} className="project-container">
+          <motion.div
+            key={project.name}
+            className="project-container"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: 1.2 } }}
+            viewport={{ amount: 0.5, once: true }}
+          >
             <div>
               <Image
                 src={project.img}
@@ -40,7 +41,7 @@ const Projects = () => {
               <div className="flex gap-2">
                 <a
                   href="#"
-                  className="inline-flex items-center px-4 py-2 bg-black/70 hover:bg-black/50 border border-transparent rounded"
+                  className="inline-flex items-center px-4 py-2 bg-white text-black hover:bg-white/80 border border-transparent rounded"
                 >
                   <Live />
                   <span className="pl-2">Visit</span>
@@ -48,7 +49,7 @@ const Projects = () => {
 
                 <a
                   href="#"
-                  className="inline-flex items-center px-4 py-2 bg-white text-black hover:bg-white/80 border border-white/10 rounded"
+                  className="inline-flex items-center px-4 py-2 bg-black/70 hover:bg-black/50 border border-stone-800/90 rounded"
                 >
                   <Github />
                   <span className="pl-2">Source</span>
@@ -63,7 +64,7 @@ const Projects = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </section>
     </div>

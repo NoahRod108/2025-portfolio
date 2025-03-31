@@ -1,21 +1,71 @@
-import React from "react";
+"use client";
+
+import { motion } from "framer-motion";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+
+const navItems = [
+  {
+    path: "/",
+    name: "Home",
+  },
+  {
+    path: "/projects",
+    name: "Projects",
+  },
+  {
+    path: "/about",
+    name: "About",
+  },
+];
 
 const Header = () => {
+  let pathname = usePathname() || "/";
+
+  const [hoveredPath, setHoveredPath] = useState(pathname);
+
   return (
-    // <header className="flex justify-center items-center relative top-3">
-    <header className="fixed left-1/2 top-10 z-[999] -translate-x-1/2 md:w-auto">
-      <nav className="flex justify-around gap-1 p-2 border border-white/5 rounded-full bg-white/10 backdrop-blur-md">
-        <a href="#" className="nav-item">
-          Home
-        </a>
-        <a href="#" className="nav-item">
-          Projects
-        </a>
-        <a href="#" className="nav-item bg-white text-[--background]">
-          Contact
-        </a>
-      </nav>
-    </header>
+    <div className="flex justify-center items-center mt-8">
+      <div className="border border-stone-800/90 p-[0.4rem] rounded-full sticky z-[100] bg-stone-900/80 backdrop-blur-md max-w-min">
+        <nav className="flex gap-2 relative justify-center w-full z-[100] rounded-lg">
+          {navItems.map((item, index) => {
+            const isActive = item.path === pathname;
+
+            return (
+              <Link
+                key={item.path}
+                className={`px-4 py-2 rounded-md text-sm relative duration-300 ease-in lg:text-xl ${
+                  isActive ? "text-zinc-100" : "text-zinc-400"
+                }`}
+                data-active={isActive}
+                href={item.path}
+                onMouseOver={() => setHoveredPath(item.path)}
+                onMouseLeave={() => setHoveredPath(pathname)}
+              >
+                <span>{item.name}</span>
+                {item.path === hoveredPath && (
+                  <motion.div
+                    className="absolute bottom-0 left-0 h-full bg-stone-800/80 rounded-full -z-10"
+                    layoutId="navbar"
+                    aria-hidden="true"
+                    style={{
+                      width: "100%",
+                    }}
+                    transition={{
+                      type: "spring",
+                      bounce: 0.1,
+                      stiffness: 90,
+                      duration: 0.3,
+                    }}
+                  />
+                )}
+              </Link>
+            );
+          })}
+        </nav>
+      </div>
+    </div>
   );
 };
 
