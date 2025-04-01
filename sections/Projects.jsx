@@ -18,7 +18,7 @@ const Projects = () => {
         {projects.map((project) => (
           <motion.div
             key={project.name}
-            className="project-container"
+            className="item-container"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 1.2 } }}
             viewport={{ amount: 0.5, once: true }}

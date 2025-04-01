@@ -3,22 +3,8 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { navItems } from "@/constants";
 import Link from "next/link";
-
-const navItems = [
-  {
-    path: "/",
-    name: "Home",
-  },
-  {
-    path: "/projects",
-    name: "Projects",
-  },
-  {
-    path: "/about",
-    name: "About",
-  },
-];
 
 const Header = () => {
   let pathname = usePathname() || "/";
@@ -26,8 +12,8 @@ const Header = () => {
   const [hoveredPath, setHoveredPath] = useState(pathname);
 
   return (
-    <div className="flex justify-center items-center mt-8">
-      <div className="border border-stone-800/90 p-[0.4rem] rounded-full sticky z-[100] bg-stone-900/80 backdrop-blur-md max-w-min">
+    <div className="flex justify-center items-center mt-8 sticky top-0 z-[100]">
+      <div className="border border-stone-800/90 p-[0.4rem] rounded-full bg-stone-900/80 backdrop-blur-md max-w-min">
         <nav className="flex gap-2 relative justify-center w-full z-[100] rounded-lg">
           {navItems.map((item, index) => {
             const isActive = item.path === pathname;
@@ -46,7 +32,7 @@ const Header = () => {
                 <span>{item.name}</span>
                 {item.path === hoveredPath && (
                   <motion.div
-                    className="absolute bottom-0 left-0 h-full bg-stone-800/80 rounded-full -z-10"
+                    className="absolute bottom-0 left-0 h-full bg-stone-600 rounded-full -z-10"
                     layoutId="navbar"
                     aria-hidden="true"
                     style={{

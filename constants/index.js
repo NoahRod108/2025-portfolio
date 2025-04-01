@@ -1,3 +1,4 @@
+import Github from "@/public/icons/Github";
 import { home } from "@/public/images";
 
 export const projects = [
@@ -24,5 +25,63 @@ export const projects = [
     liveLink: "#",
     githubLink: "#",
     tags: ["", ""],
+  },
+];
+
+export const navItems = [
+  {
+    path: "/",
+    name: "Home",
+  },
+  {
+    path: "/projects",
+    name: "Projects",
+  },
+  {
+    path: "/about",
+    name: "About",
+  },
+];
+
+export const skillItems = [
+  {
+    image: <Github />,
+    name: "HTML",
+  },
+  {
+    image: <Github />,
+    name: "CSS",
+  },
+  {
+    image: <Github />,
+    name: "JavaScript",
+  },
+  {
+    image: <Github />,
+    name: "PHP",
+  },
+  {
+    image: <Github />,
+    name: "MySQL",
+  },
+  {
+    image: <Github />,
+    name: "MongoDB",
+  },
+  {
+    image: <Github />,
+    name: "React.js",
+  },
+  {
+    image: <Github />,
+    name: "Next.js",
+  },
+  {
+    image: <Github />,
+    name: "Tailwind",
+  },
+  {
+    image: <Github />,
+    name: "Motion",
   },
 ];
