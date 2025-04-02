@@ -21,7 +21,7 @@ const Header = () => {
             return (
               <Link
                 key={item.path}
-                className={`px-4 py-2 rounded-md text-sm relative duration-300 ease-in lg:text-xl ${
+                className={`px-4 py-2 rounded-md text-md relative duration-300 ease-in lg:text-xl ${
                   isActive ? "text-zinc-100" : "text-zinc-400"
                 }`}
                 data-active={isActive}

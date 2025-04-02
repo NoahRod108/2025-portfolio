@@ -4,10 +4,12 @@ import Skills from "@/sections/Skills";
 
 export default function Home() {
   return (
-    <div className="px-[40px] w-auto items-center flex flex-col min-h-lvh gap-[200px]">
+    <div className="px-[40px] w-auto items-center flex flex-col min-h-lvh gap-52">
       <Hero />
-      <Projects />
-      <Skills />
+      <div className="container">
+        <Projects />
+        <Skills />
+      </div>
     </div>
   );
 }

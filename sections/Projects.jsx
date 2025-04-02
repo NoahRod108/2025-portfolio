@@ -9,7 +9,7 @@ import Live from "@/public/icons/Live";
 
 const Projects = () => {
   return (
-    <div>
+    <div className="w-full">
       <div className="pb-6">
         <h2 className="text-4xl">Projects</h2>
       </div>
@@ -18,7 +18,7 @@ const Projects = () => {
         {projects.map((project) => (
           <motion.div
             key={project.name}
-            className="item-container"
+            className="project-box group"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: 1.2 } }}
             viewport={{ amount: 0.5, once: true }}
@@ -27,7 +27,7 @@ const Projects = () => {
               <Image
                 src={project.img}
                 alt="projectImg"
-                className="project-img"
+                className="project-img group-hover:grayscale-0"
               />
             </div>
             <div className="flex flex-col gap-2 mt-2 mb-4">

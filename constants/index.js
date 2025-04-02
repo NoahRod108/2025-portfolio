@@ -1,5 +1,15 @@
 import Github from "@/public/icons/Github";
+import Html from "@/public/icons/Html";
+import Motion from "@/public/icons/Motion";
+import Tailwind from "@/public/icons/Tailwind";
+import NextIcon from "@/public/icons/NextIcon";
 import { home } from "@/public/images";
+import CssIcon from "@/public/icons/CssIcon";
+import ReactIcon from "@/public/icons/ReactIcon";
+import Javascript from "@/public/icons/Javascript";
+import Php from "@/public/icons/Php";
+import Mysql from "@/public/icons/Mysql";
+import Mongo from "@/public/icons/Mongo";
 
 export const projects = [
   {
@@ -45,43 +55,43 @@ export const navItems = [
 
 export const skillItems = [
   {
-    image: <Github />,
+    image: <Html />,
     name: "HTML",
   },
   {
-    image: <Github />,
+    image: <CssIcon />,
     name: "CSS",
   },
   {
-    image: <Github />,
+    image: <Javascript />,
     name: "JavaScript",
   },
   {
-    image: <Github />,
+    image: <Php />,
     name: "PHP",
   },
   {
-    image: <Github />,
+    image: <Mysql />,
     name: "MySQL",
   },
   {
-    image: <Github />,
+    image: <Mongo />,
     name: "MongoDB",
   },
   {
-    image: <Github />,
+    image: <ReactIcon />,
     name: "React.js",
   },
   {
-    image: <Github />,
+    image: <NextIcon />,
     name: "Next.js",
   },
   {
-    image: <Github />,
+    image: <Tailwind />,
     name: "Tailwind",
   },
   {
-    image: <Github />,
+    image: <Motion />,
     name: "Motion",
   },
 ];
