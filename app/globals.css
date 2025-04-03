@@ -16,7 +16,7 @@ body {
 }
 
 body {
-  background: radial-gradient(ellipse at top, #070707 0%, #090a0f 100%);
+  background: radial-gradient(circle, #070707 80%, #11131d 100%);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 #hero-icons a {
-  @apply border rounded-full border-[#ddd] p-4 transition duration-300 ease-in-out hover:border-cyan-500 hover:bg-stone-800/90 hover:scale-[1.1];
+  @apply border rounded-full border-[#ddd] p-4 transition duration-300 ease-in-out hover:border-cyan-500/20 hover:bg-stone-800/20 hover:scale-[1.1];
 }
 #hero-icons svg {
   @apply w-7 h-7 md:w-12 md:h-12 lg:w-8 lg:h-8;

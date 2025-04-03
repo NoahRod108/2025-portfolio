@@ -1,4 +1,5 @@
 import Github from "@/public/icons/Github";
+import Mail from "@/public/icons/Mail";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
     >
       <div className="flex gap-4 py-4">
         <a href="#" className="inline-flex items-center">
-          <Github />
+          <Mail />
         </a>
         <a href="#" className="inline-flex items-center">
           <Github />

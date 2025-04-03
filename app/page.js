@@ -5,8 +5,8 @@ import Skills from "@/sections/Skills";
 export default function Home() {
   return (
     <div className="px-[40px] w-auto items-center flex flex-col min-h-lvh gap-52">
-      <Hero />
       <div className="container">
+        <Hero />
         <Projects />
         <Skills />
       </div>
