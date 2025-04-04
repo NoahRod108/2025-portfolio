@@ -1,4 +1,5 @@
 import Footer from "@/sections/Footer";
+import StarParticles from "@/components/StarParticles";
 import "./globals.css";
 import Header from "@/sections/Header";
 
@@ -10,9 +11,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[--background] text-[--primary-text]">
+      <StarParticles id="tsparticles" />
+      <body className="text-[--primary-text] px-[40px] items-center flex flex-col min-h-lvh">
         <Header />
-        <main className="text-primaryText ">{children}</main>
+        <div className="container">
+          <main className="flex flex-col gap-52 text-primaryText max-w-ful">
+            {children}
+          </main>
+        </div>
         <Footer />
       </body>
     </html>

@@ -5,10 +5,13 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="flex flex-col items-center my-8 xs:flex-row xs:justify-evenly"
+      className="flex flex-col items-center w-full my-8 xs:flex-row xs:justify-evenly"
     >
       <div className="flex gap-4 py-4">
-        <a href="#" className="inline-flex items-center">
+        <a
+          href="mailto:noaherodriguez18@gmail.com"
+          className="inline-flex items-center"
+        >
           <Mail />
         </a>
         <a href="#" className="inline-flex items-center">

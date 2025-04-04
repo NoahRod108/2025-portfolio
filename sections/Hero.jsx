@@ -5,13 +5,11 @@ import { easeOut, motion } from "framer-motion";
 import Github from "@/public/icons/Github";
 import Linkedin from "@/public/icons/Linkedin";
 import Resume from "@/public/icons/Resume";
-import StarParticles from "@/components/StarParticles";
 
 const Hero = () => {
   return (
     <div className="flex flex-col justify-center h-lvh">
       <section id="hero" className="text-primaryText">
-        <StarParticles id="tsparticles" />
         <motion.div
           animate={{
             opacity: [0, 100],

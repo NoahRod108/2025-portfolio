@@ -44,7 +44,7 @@ export const navItems = [
     name: "Home",
   },
   {
-    path: "/projects",
+    path: "/#projects",
     name: "Projects",
   },
   {
