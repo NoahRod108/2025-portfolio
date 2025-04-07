@@ -11,14 +11,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <StarParticles id="tsparticles" />
-      <body className="text-[--primary-text] px-[40px] items-center flex flex-col min-h-lvh">
-        <Header />
-        <div className="container">
-          <main className="flex flex-col gap-52 text-primaryText max-w-ful">
-            {children}
-          </main>
-        </div>
+      <body className="text-[--primary-text] px-36 items-center flex flex-col min-h-lvh">
+        <StarParticles id="tsparticles" />
+        <main className="container text-primaryText">
+          <Header />
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

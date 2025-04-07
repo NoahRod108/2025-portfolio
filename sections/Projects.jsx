@@ -14,10 +14,12 @@ const Projects = () => {
         <div className="pb-6">
           <h2 className="text-4xl">Projects</h2>
         </div>
-        {projects.map((project) => (
-          <div className="flex flex-col justify-center items-center">
+        {projects.map((project, i) => (
+          <div
+            key={project.name}
+            className="flex flex-col justify-center items-center"
+          >
             <motion.div
-              key={project.name}
               className="project-box group"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1, transition: { duration: 1.2 } }}

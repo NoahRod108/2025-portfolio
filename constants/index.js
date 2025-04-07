@@ -3,7 +3,7 @@ import Html from "@/public/icons/Html";
 import Motion from "@/public/icons/Motion";
 import Tailwind from "@/public/icons/Tailwind";
 import NextIcon from "@/public/icons/NextIcon";
-import { home } from "@/public/images";
+import { home, post } from "@/public/images";
 import CssIcon from "@/public/icons/CssIcon";
 import ReactIcon from "@/public/icons/ReactIcon";
 import Javascript from "@/public/icons/Javascript";
@@ -23,13 +23,13 @@ export const projects = [
   {
     name: "My Post",
     desc: "This is a project to learn Next.js and practice new technologies. I plan to come back and continue to expand on the project.",
-    img: home,
+    img: post,
     liveLink: "https://next-js-tutorial-nine-xi.vercel.app/",
     githubLink: "https://github.com/NoahRod108/next-js-tutorial",
     tags: ["Next.js", "Tailwind", "MongoDB", "NextAuth"],
   },
   {
-    name: "",
+    name: "placeholder",
     desc: "placeholder",
     img: home,
     liveLink: "#",

@@ -12,7 +12,7 @@ const Header = () => {
   const [hoveredPath, setHoveredPath] = useState(pathname);
 
   return (
-    <div className="flex justify-center items-center mt-8 sticky top-0 z-[100]">
+    <nav className="flex justify-center items-center mt-8 sticky top-0 z-[100]">
       <div className="border border-stone-800/90 p-[0.4rem] rounded-full bg-stone-900/80 backdrop-blur-md max-w-min">
         <nav className="flex gap-2 relative justify-center w-full z-[100] rounded-lg">
           {navItems.map((item, index) => {
@@ -51,7 +51,7 @@ const Header = () => {
           })}
         </nav>
       </div>
-    </div>
+    </nav>
   );
 };
 

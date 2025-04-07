@@ -1,12 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { easeOut, motion } from "framer-motion";
 import Github from "@/public/icons/Github";
 import Linkedin from "@/public/icons/Linkedin";
 import Resume from "@/public/icons/Resume";
 
 const Hero = () => {
+  const [underline, setUnderline] = useState(false);
+
   return (
     <div className="flex flex-col justify-center h-lvh">
       <section id="hero" className="text-primaryText">
@@ -15,7 +17,7 @@ const Hero = () => {
             opacity: [0, 100],
           }}
           transition={{ duration: 1.8, ease: "easeInOut" }}
-          className="flex gap-4 sm:gap-8 items-center sm:items-end"
+          className="flex gap-4 justify-center sm:gap-8 items-center sm:items-end"
         >
           <h1 className="text-6xl md:text-[10rem]">Noah</h1>
 
@@ -23,7 +25,7 @@ const Hero = () => {
             animate={{
               opacity: [0, 100],
             }}
-            transition={{ duration: 2, delay: 1, ease: "easeInOut" }}
+            transition={{ duration: 2, delay: 0.5, ease: "easeInOut" }}
           >
             <p className="text-secondaryText max-w-[250px] hidden sm:inline-block sm:max-w-[450px] sm:text-lg md:text-xl">
               Web Developer with over 3 years of experience working on
