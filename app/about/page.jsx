@@ -20,7 +20,7 @@ const page = () => {
           </div>
         </div>
         <div className="about-box row-span-2">2</div>
-        <div className="about-box">
+        <div className="about-box bg-cyan-500/50 text-xl">
           <div className="flex flex-col justify-center items-center text-center h-full">
             <h2>Freelance & Full Stack Developer</h2>
           </div>
@@ -37,7 +37,7 @@ const page = () => {
           </div>
         </div>
         <div className="about-box row-span-2">5</div>
-        <div className="about-box">6</div>
+        <div className="about-box bg-cyan-500/50">6</div>
         <div className="about-box col-span-2">
           <div className="flex flex-col p-4 gap-2">
             <div>
