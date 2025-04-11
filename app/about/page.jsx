@@ -6,7 +6,17 @@ import { motion } from "framer-motion";
 import React from "react";
 
 const page = () => {
-  //className="grid grid-cols-3 grid-rows-4 gap-4"
+  const arrowAnimate = {
+    rest: {
+      translateX: "0px",
+      translateY: "0px",
+    },
+    hover: {
+      translateY: "-6px",
+      translateX: "6px",
+    },
+  };
+
   return (
     <div className="flex h-full w-full justify-center items-center pt-8 text-lg">
       <section id="about" className="grid md:grid-cols-3 grid-rows-4 gap-4">
@@ -30,7 +40,25 @@ const page = () => {
           {/* TODO MODAL */}
           <div className="relative">
             <div className="w-6 h-6 absolute top-0 right-0">
-              <Arrow />
+              {/* <Arrow /> */}
+              <motion.svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeLidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="feather feather-arrow-up-right"
+                initial={{ translateY: "0px" }}
+                whileHover={{ translateY: "-6px", translateX: "6px" }}
+              >
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline
+                  points="7 7 17 7 17 17"
+                  initial={{ translateY: "0px" }}
+                ></polyline>
+              </motion.svg>
             </div>
           </div>
           <div className="flex flex-col justify-center items-center text-center h-full gap-2">
