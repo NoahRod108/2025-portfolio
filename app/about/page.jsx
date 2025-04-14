@@ -1,22 +1,12 @@
 "use client";
 
 import Arrow from "@/public/icons/Arrow";
+import Expand from "@/public/icons/Expand";
 import Mail from "@/public/icons/Mail";
 import { motion } from "framer-motion";
 import React from "react";
 
 const page = () => {
-  const arrowAnimate = {
-    rest: {
-      translateX: "0px",
-      translateY: "0px",
-    },
-    hover: {
-      translateY: "-6px",
-      translateX: "6px",
-    },
-  };
-
   return (
     <div className="flex h-full w-full justify-center items-center pt-8 text-lg">
       <section id="about" className="grid md:grid-cols-3 grid-rows-4 gap-4">
@@ -29,36 +19,22 @@ const page = () => {
             <div className="text-secondaryText">
               <p>
                 I'm <span>Noah Rodriguez</span>, a passionate developer focusing
-                on <span>full stack</span> applications. I have over{" "}
+                on <span>full-stack</span> applications. I have over{" "}
                 <span>four years</span> of experience developing and maintaining
                 user-facing applicaitons.
               </p>
             </div>
           </div>
         </div>
-        <div className="about-box md:row-span-2 cursor-pointer">
-          {/* TODO MODAL */}
+        <motion.button
+          className="about-box md:row-span-2 cursor-pointer"
+          initial="default"
+          whileHover="hover"
+          whileTap={{ scale: 0.8 }}
+        >
           <div className="relative">
             <div className="w-6 h-6 absolute top-0 right-0">
-              {/* <Arrow /> */}
-              <motion.svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeLidth="1"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="feather feather-arrow-up-right"
-                initial={{ translateY: "0px" }}
-                whileHover={{ translateY: "-6px", translateX: "6px" }}
-              >
-                <line x1="7" y1="17" x2="17" y2="7"></line>
-                <polyline
-                  points="7 7 17 7 17 17"
-                  initial={{ translateY: "0px" }}
-                ></polyline>
-              </motion.svg>
+              <Expand />
             </div>
           </div>
           <div className="flex flex-col justify-center items-center text-center h-full gap-2">
@@ -93,7 +69,7 @@ const page = () => {
               </ul> */}
             </div>
           </div>
-        </div>
+        </motion.button>
         <div className="about-box bg-cyan-500/50 text-xl">
           <div className="flex flex-col justify-center items-center text-center h-full">
             <h2>Freelance & Full Stack Developer</h2>
@@ -111,12 +87,16 @@ const page = () => {
           </div>
         </div>
         <div className="about-box md:row-span-2">5</div>
-        <div className="about-box bg-cyan-500/50 group">
+        <motion.div
+          className="about-box bg-cyan-500/50 group"
+          initial="default"
+          whileHover="hover"
+        >
           <a href="mailto:noaherodriguez18@gmail.com">
             <div className="relative">
-              <motion.div className="w-6 h-6 absolute top-0 right-0">
+              <div className="w-6 h-6 absolute top-0 right-0">
                 <Arrow />
-              </motion.div>
+              </div>
             </div>
 
             <div className="flex flex-col justify-center items-center h-full">
@@ -129,7 +109,7 @@ const page = () => {
               </div>
             </div>
           </a>
-        </div>
+        </motion.div>
         <div className="about-box md:col-span-2">
           <div className="flex flex-col gap-2">
             <div className="text-xl">

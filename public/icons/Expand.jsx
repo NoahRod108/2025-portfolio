@@ -1,15 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Arrow = () => {
+const Expand = () => {
   const arrowAnimate = {
-    default: {
-      translateX: "0px",
-      translateY: "0px",
-    },
+    default: {},
     hover: {
-      translateY: "-6px",
-      translateX: "6px",
       scale: 1.2,
     },
   };
@@ -23,13 +18,15 @@ const Arrow = () => {
       strokeWidth="1"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="feather feather-arrow-up-right"
+      className="feather feather-maximize-2"
       variants={arrowAnimate}
     >
-      <line x1="7" y1="17" x2="17" y2="7"></line>
-      <polyline points="7 7 17 7 17 17"></polyline>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <polyline points="9 21 3 21 3 15"></polyline>
+      <line x1="21" y1="3" x2="14" y2="10"></line>
+      <line x1="3" y1="21" x2="10" y2="14"></line>
     </motion.svg>
   );
 };
 
-export default Arrow;
+export default Expand;

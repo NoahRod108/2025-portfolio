@@ -28,7 +28,7 @@ const Hero = () => {
             transition={{ duration: 2, delay: 0.5, ease: "easeInOut" }}
           >
             <p className="text-secondaryText max-w-[250px] hidden sm:inline-block sm:max-w-[450px] sm:text-lg md:text-xl">
-              Web Developer with over 3 years of experience working on
+              Web Developer with over 4 years of experience working on
               full-stack web applications
             </p>
           </motion.div>
