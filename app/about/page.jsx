@@ -3,14 +3,27 @@
 import Arrow from "@/public/icons/Arrow";
 import Expand from "@/public/icons/Expand";
 import Mail from "@/public/icons/Mail";
-import { motion } from "framer-motion";
-import React from "react";
+import Modal from "@/components/Modal";
+import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
 
 const page = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const closed = () => setModalOpen(false);
+  const opened = () => setModalOpen(true);
+
   return (
     <div className="flex h-full w-full justify-center items-center pt-8 text-lg">
       <section id="about" className="grid md:grid-cols-3 grid-rows-4 gap-4">
-        <div className="about-box col-span-1 md:col-span-2">
+        <motion.div
+          className="about-box col-span-1 md:col-span-2"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.9, delay: 0.2 },
+          }}
+        >
           <div className="flex flex-col gap-2">
             <div className="text-xl">
               <h2>Hello!</h2>
@@ -25,17 +38,21 @@ const page = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
         <motion.button
-          className="about-box md:row-span-2 cursor-pointer"
-          initial="default"
-          whileHover="hover"
+          className="about-box md:row-span-2 cursor-pointer group"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.9, delay: 0.2 },
+          }}
           whileTap={{ scale: 0.8 }}
+          onClick={() => (modalOpen ? closed() : opened())}
         >
           <div className="relative">
-            <div className="w-6 h-6 absolute top-0 right-0">
+            <motion.div className="w-6 h-6 absolute top-0 right-0 transition duration-300 ease-in-out group-hover:scale-125">
               <Expand />
-            </div>
+            </motion.div>
           </div>
           <div className="flex flex-col justify-center items-center text-center h-full gap-2">
             <div>
@@ -48,34 +65,28 @@ const page = () => {
               <p>Solutions Engineer @ Valparaiso University</p>
               <p className="text-sm">2020 - present</p>
             </div>
-
-            <div>
-              {/* <ul className="list-disc p-4">
-                <li>
-                  I work in a LAMP stack daily. I am experienced with the front
-                  and back end of applications.
-                </li>
-                <li>
-                  I work with MySQL and MySQL CLI to manage our databases.
-                </li>
-                <li>
-                  I developed, maintained, and shipped production-ready code for
-                  web applications.
-                </li>
-                <li>
-                  I meet with staff and faculty to discuss new features and give
-                  guidance on a technical level
-                </li>
-              </ul> */}
-            </div>
           </div>
         </motion.button>
-        <div className="about-box bg-cyan-500/50 text-xl">
+        <motion.div
+          className="about-box bg-cyan-500/50 text-xl"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.9, delay: 0.2 },
+          }}
+        >
           <div className="flex flex-col justify-center items-center text-center h-full">
             <h2>Freelance & Full Stack Developer</h2>
           </div>
-        </div>
-        <div className="about-box md:row-span-2">
+        </motion.div>
+        <motion.div
+          className="about-box md:row-span-2"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.9, delay: 0.2 },
+          }}
+        >
           <div className="flex flex-col justify-evenly items-center gap-2 h-full">
             <div className="rounded-full border border-stone-800/90 w-16 h-16">
               <img src="" />
@@ -85,16 +96,28 @@ const page = () => {
               <h2>Noah Rodriguez</h2>
             </div>
           </div>
-        </div>
-        <div className="about-box md:row-span-2">5</div>
+        </motion.div>
+        <motion.div
+          className="about-box md:row-span-2"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.9, delay: 0.2 },
+          }}
+        >
+          5
+        </motion.div>
         <motion.div
           className="about-box bg-cyan-500/50 group"
-          initial="default"
-          whileHover="hover"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.9, delay: 0.2 },
+          }}
         >
           <a href="mailto:noaherodriguez18@gmail.com">
             <div className="relative">
-              <div className="w-6 h-6 absolute top-0 right-0">
+              <div className="w-6 h-6 absolute top-0 right-0 transition duration-300 ease-in-out group-hover:scale-125">
                 <Arrow />
               </div>
             </div>
@@ -110,22 +133,38 @@ const page = () => {
             </div>
           </a>
         </motion.div>
-        <div className="about-box md:col-span-2">
+        <motion.div
+          className="about-box md:col-span-2"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: { duration: 0.9, delay: 0.2 },
+          }}
+        >
           <div className="flex flex-col gap-2">
-            <div className="text-xl">
+            <div className="text-xl text-secondaryText">
               <h2>Education</h2>
             </div>
 
+            <div className="flex justify-between">
+              <div className="text-xl">
+                <h2>Purdue university Northwest</h2>
+              </div>
+              <div>
+                <p className="text-secondaryText">2020 - Present</p>
+              </div>
+            </div>
+
             <div className="text-secondaryText">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Voluptatibus perferendis fugit debitis labore corporis vitae
-                suscipit quam iure incidunt quas.
-              </p>
+              <p>Bachelor of Science in Computer Information Technology</p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
+      {/* Modal */}
+      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
+        {modalOpen && <Modal modalOpen={modalOpen} handleClose={closed} />}
+      </AnimatePresence>
     </div>
   );
 };

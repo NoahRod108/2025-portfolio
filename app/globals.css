@@ -74,6 +74,15 @@ body {
   color: var(--secondary-text);
 }
 
+/* modal stuff */
+.backdrop {
+  @apply absolute top-0 left-0 h-full w-full bg-[#000000e1] flex justify-center items-center;
+}
+
+.modal {
+  @apply max-w-[700px] h-[700px] m-auto border border-stone-800/90 rounded-lg backdrop-blur-md bg-gradient-to-b from-white/10 bg-black/70 p-8;
+}
+
 /* Wave animation */
 .wave {
   animation-name: wave-animation;
