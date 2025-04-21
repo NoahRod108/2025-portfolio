@@ -29,7 +29,7 @@ export const projects = [
     tags: ["Next.js", "Tailwind", "MongoDB", "NextAuth"],
   },
   {
-    name: "placeholder",
+    name: "",
     desc: "placeholder",
     img: home,
     liveLink: "#",

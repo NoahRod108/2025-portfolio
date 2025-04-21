@@ -6,6 +6,7 @@ import Mail from "@/public/icons/Mail";
 import Modal from "@/components/Modal";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
+import Coffee from "@/public/icons/Coffee";
 
 const page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -14,8 +15,11 @@ const page = () => {
   const opened = () => setModalOpen(true);
 
   return (
-    <div className="flex h-full w-full justify-center items-center pt-8 text-lg">
-      <section id="about" className="grid md:grid-cols-3 grid-rows-4 gap-4">
+    <div className="flex justify-center items-center pt-8 text-lg">
+      <section
+        id="about"
+        className="grid md:grid-cols-3 grid-rows-4 gap-4 h-full"
+      >
         <motion.div
           className="about-box col-span-1 md:col-span-2"
           initial={{ opacity: 0 }}
@@ -39,7 +43,10 @@ const page = () => {
             </div>
           </div>
         </motion.div>
-        <motion.button
+        <motion.a
+          href="https://noahrod108.github.io/digitalResume/assets/noah_rodriguez_resume_2025.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="about-box md:row-span-2 cursor-pointer group"
           initial={{ opacity: 0 }}
           whileInView={{
@@ -47,13 +54,13 @@ const page = () => {
             transition: { duration: 0.9, delay: 0.2 },
           }}
           whileTap={{ scale: 0.8 }}
-          onClick={() => (modalOpen ? closed() : opened())}
+          whileHover="hover"
         >
-          <div className="relative">
-            <motion.div className="w-6 h-6 absolute top-0 right-0 transition duration-300 ease-in-out group-hover:scale-125">
-              <Expand />
-            </motion.div>
-          </div>
+          <motion.div className="relative">
+            <div className="w-6 h-6 absolute top-0 right-0">
+              <Arrow />
+            </div>
+          </motion.div>
           <div className="flex flex-col justify-center items-center text-center h-full gap-2">
             <div>
               <h2 className="text-xl text-primaryText">
@@ -66,7 +73,7 @@ const page = () => {
               <p className="text-sm">2020 - present</p>
             </div>
           </div>
-        </motion.button>
+        </motion.a>
         <motion.div
           className="about-box bg-cyan-500/50 text-xl"
           initial={{ opacity: 0 }}
@@ -105,7 +112,18 @@ const page = () => {
             transition: { duration: 0.9, delay: 0.2 },
           }}
         >
-          5
+          <div className="flex flex-col justify-center items-center">
+            <div className="w-[154px] h-[154px]">
+              <Coffee />
+            </div>
+
+            <div className="text-secondaryText">
+              <p>
+                In my free time you can find me playing tabletop and virtual
+                games. I also like to travel and visit new places.
+              </p>
+            </div>
+          </div>
         </motion.div>
         <motion.div
           className="about-box bg-cyan-500/50 group"
@@ -114,10 +132,11 @@ const page = () => {
             opacity: 1,
             transition: { duration: 0.9, delay: 0.2 },
           }}
+          whileHover="hover"
         >
           <a href="mailto:noaherodriguez18@gmail.com">
             <div className="relative">
-              <div className="w-6 h-6 absolute top-0 right-0 transition duration-300 ease-in-out group-hover:scale-125">
+              <div className="w-6 h-6 absolute top-0 right-0">
                 <Arrow />
               </div>
             </div>
@@ -160,11 +179,15 @@ const page = () => {
             </div>
           </div>
         </motion.div>
+        {/* Modal */}
+        <AnimatePresence
+          initial={false}
+          mode="wait"
+          onExitComplete={() => null}
+        >
+          {modalOpen && <Modal modalOpen={modalOpen} handleClose={closed} />}
+        </AnimatePresence>
       </section>
-      {/* Modal */}
-      <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
-        {modalOpen && <Modal modalOpen={modalOpen} handleClose={closed} />}
-      </AnimatePresence>
     </div>
   );
 };

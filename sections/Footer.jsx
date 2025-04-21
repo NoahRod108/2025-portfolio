@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="flex flex-col items-center w-full my-8 xs:flex-row xs:justify-evenly"
+      className="flex flex-col items-center text-center w-full my-8 xs:flex-row xs:justify-evenly"
     >
       <div className="flex gap-4 py-4">
         <a
