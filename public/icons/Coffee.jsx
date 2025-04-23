@@ -2,7 +2,7 @@ import React from "react";
 
 const Coffee = () => {
   return (
-    <svg viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="25 10 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
       {/* <!-- Cup Body --> */}
       <path
         d="M45 50
@@ -36,7 +36,7 @@ const Coffee = () => {
         fill="none"
         stroke="#6F4E37"
         strokeWidth="4"
-        stroke-linecap="round"
+        strokeLinecap="round"
       />
 
       {/* <!-- Animated Steam Lines --> */}
@@ -45,7 +45,7 @@ const Coffee = () => {
           d="M65 25C63 20 67 15 65 10"
           stroke="#aaa"
           strokeWidth="2"
-          stroke-linecap="round"
+          strokeLinecap="round"
         >
           <animateTransform
             attributeName="transform"
@@ -65,7 +65,7 @@ const Coffee = () => {
           d="M75 22C73 17 77 12 75 8"
           stroke="#aaa"
           strokeWidth="2"
-          stroke-linecap="round"
+          strokeLinecap="round"
         >
           <animateTransform
             attributeName="transform"
@@ -87,7 +87,7 @@ const Coffee = () => {
           d="M85 25C83 20 87 15 85 10"
           stroke="#aaa"
           strokeWidth="2"
-          stroke-linecap="round"
+          strokeLinecap="round"
         >
           <animateTransform
             attributeName="transform"

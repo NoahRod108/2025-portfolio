@@ -112,15 +112,15 @@ const page = () => {
             transition: { duration: 0.9, delay: 0.2 },
           }}
         >
-          <div className="flex flex-col justify-center items-center">
-            <div className="w-[154px] h-[154px]">
+          <div className="flex flex-col justify-center items-center gap-4">
+            <div className="w-[8rem] h-[8rem]">
               <Coffee />
             </div>
 
             <div className="text-secondaryText">
               <p>
                 In my free time you can find me playing tabletop and virtual
-                games. I also like to travel and visit new places.
+                games. I also like to travel and work on my hobbies.
               </p>
             </div>
           </div>
@@ -180,13 +180,13 @@ const page = () => {
           </div>
         </motion.div>
         {/* Modal */}
-        <AnimatePresence
+        {/* <AnimatePresence
           initial={false}
           mode="wait"
           onExitComplete={() => null}
         >
           {modalOpen && <Modal modalOpen={modalOpen} handleClose={closed} />}
-        </AnimatePresence>
+        </AnimatePresence> */}
       </section>
     </div>
   );
