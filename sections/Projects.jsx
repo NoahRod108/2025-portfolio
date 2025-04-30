@@ -44,20 +44,20 @@ const Projects = () => {
                   >
                     <div className="flex gap-2">
                       <a
-                        href="#"
+                        href={project.liveLink}
                         className="inline-flex items-center px-4 py-2 bg-white text-black hover:bg-white/80 border border-transparent rounded"
                       >
                         <Live />
                         <span className="pl-2">Visit</span>
                       </a>
 
-                      <a
+                      {/* <a
                         href="#"
                         className="inline-flex items-center px-4 py-2 bg-black/70 hover:bg-black/50 border border-stone-800/90 rounded"
                       >
                         <Github />
                         <span className="pl-2">Source</span>
-                      </a>
+                      </a> */}
                     </div>
 
                     <div className="flex gap-2 flex-wrap items-center justify-center">

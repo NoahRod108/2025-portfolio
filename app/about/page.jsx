@@ -7,6 +7,8 @@ import Modal from "@/components/Modal";
 import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 import Coffee from "@/public/icons/Coffee";
+import Image from "next/image";
+import { me } from "@/public/images";
 
 const page = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -94,15 +96,18 @@ const page = () => {
             transition: { duration: 0.9, delay: 0.2 },
           }}
         >
-          <div className="flex flex-col justify-evenly items-center gap-2 h-full">
-            <div className="rounded-full border border-stone-800/90 w-16 h-16">
-              <img src="" />
+          <motion.div
+            className="flex flex-col justify-evenly items-center gap-2 h-full"
+            whileHover={{ scale: 1.1 }}
+          >
+            <div>
+              <Image
+                src={me}
+                alt="me"
+                className="rounded-full border border-stone-800/90 w-52 h-52"
+              />
             </div>
-
-            <div className="text-xl">
-              <h2>Noah Rodriguez</h2>
-            </div>
-          </div>
+          </motion.div>
         </motion.div>
         <motion.div
           className="about-box md:row-span-2"
