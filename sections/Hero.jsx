@@ -57,13 +57,13 @@ const Hero = () => {
           transition={{ duration: 1.8, ease: "easeInOut" }}
           className="flex justify-center items-center gap-8 pt-8"
         >
-          <a href="#">
+          <a href="https://github.com/NoahRod108">
             <Github />
           </a>
-          <a href="#">
+          <a href="https://www.linkedin.com/in/noah-rodriguez-8121041aa/">
             <Linkedin />
           </a>
-          <a href="#">
+          <a href="https://noahrod108.github.io/digitalResume/assets/noah_rodriguez_resume_2025.pdf">
             <Resume />
           </a>
         </motion.div>
