@@ -172,7 +172,7 @@ const page = () => {
 
             <div className="flex justify-between">
               <div className="text-xl">
-                <h2>Purdue university Northwest</h2>
+                <h2>Purdue University Northwest</h2>
               </div>
               <div>
                 <p className="text-secondaryText">2020 - Present</p>
