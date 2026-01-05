@@ -46,7 +46,7 @@ const page = () => {
           </div>
         </motion.div>
         <motion.a
-          href="https://noahrod108.github.io/digitalResume/assets/noah_rodriguez_resume_2025.pdf"
+          href="https://noahrod108.github.io/digitalResume/assets/noah_rodriguez_resume_2026.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="about-box md:row-span-2 cursor-pointer group"
