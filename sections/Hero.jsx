@@ -63,7 +63,7 @@ const Hero = () => {
           <a href="https://www.linkedin.com/in/noah-rodriguez-8121041aa/">
             <Linkedin />
           </a>
-          <a href="https://noahrod108.github.io/digitalResume/assets/noah_rodriguez_resume_2025.pdf">
+          <a href="https://github.com/NoahRod108/digitalResume/blob/main/assets/noah_rodriguez_resume_2026.pdf">
             <Resume />
           </a>
         </motion.div>
