@@ -27,10 +27,12 @@ const Projects = () => {
                   whileInView={{ opacity: 1, transition: { duration: 1.2 } }}
                   viewport={{ amount: 0.5, once: true }}
                 >
-                  <div>
+                  <div className="relative w-full aspect-video overflow-hidden rounded-xl">
                     <Image
                       src={project.img}
                       alt="projectImg"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 768px"
                       className="project-img group-hover:grayscale-0"
                     />
                   </div>
@@ -73,7 +75,7 @@ const Projects = () => {
                   </div>
                 </motion.div>
               </div>
-            )
+            ),
         )}
       </section>
     </>

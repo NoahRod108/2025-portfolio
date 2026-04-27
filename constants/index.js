@@ -3,7 +3,7 @@ import Html from "@/public/icons/Html";
 import Motion from "@/public/icons/Motion";
 import Tailwind from "@/public/icons/Tailwind";
 import NextIcon from "@/public/icons/NextIcon";
-import { home, post } from "@/public/images";
+import { home, post, backend } from "@/public/images";
 import CssIcon from "@/public/icons/CssIcon";
 import ReactIcon from "@/public/icons/ReactIcon";
 import Javascript from "@/public/icons/Javascript";
@@ -29,12 +29,12 @@ export const projects = [
     tags: ["Next.js", "Tailwind", "MongoDB", "NextAuth"],
   },
   {
-    name: "",
-    desc: "placeholder",
-    img: home,
-    liveLink: "#",
-    githubLink: "#",
-    tags: ["", ""],
+    name: "Rest API Backend",
+    desc: "A REST API backend built with Node.js, Express, and MongoDB. Includes user authentication with JWT and bcrypt password hashing, plus full CRUD for posts. You can test CRUD functionality with any API client. You can test the authentication using the simple frontend form I created.",
+    img: backend,
+    liveLink: "https://github.com/NoahRod108/intro-backend",
+    githubLink: "https://github.com/NoahRod108/intro-backend",
+    tags: ["API", "REST", "Express.js", "Node.js", "MongoDB", "JWT"],
   },
 ];
 
