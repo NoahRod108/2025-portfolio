@@ -85,7 +85,7 @@ const page = () => {
           }}
         >
           <div className="flex flex-col justify-center items-center text-center h-full">
-            <h2>Freelance & Full Stack Developer</h2>
+            <h2>Front End & Back End Developer</h2>
           </div>
         </motion.div>
         <motion.div
@@ -175,7 +175,7 @@ const page = () => {
                 <h2>Purdue University Northwest</h2>
               </div>
               <div>
-                <p className="text-secondaryText">2020 - Present</p>
+                <p className="text-secondaryText">2015 - 2020</p>
               </div>
             </div>
 
